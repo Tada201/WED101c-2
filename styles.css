@@ -10,6 +10,74 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    background-color: #F5F5F5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1A2526;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1A2526;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+b, p {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 20px;
+    text-align: left;
+}
+
+.button {
+    background-color: #FF8C00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #FFA500;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid #CCCCCC;
+    margin: 20px 0;
+}
+
+.image-section {
+    background-color: #F0F0F0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Header styling */
@@ -85,7 +153,8 @@ nav img {
 }
 
 .grid img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .flex {
