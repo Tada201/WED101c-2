@@ -1,0 +1,107 @@
+
+/* Existing background image styles */
+.background-image {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Header styling */
+header {
+    background-color: #2c3e50;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #34495e;
+}
+
+/* Main content styling */
+main {
+    background-color: #ecf0f1;
+    font-size: 18px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* List item styling */
+/* li {
+    display: block;
+    width: 100%;
+} */
+
+nav {
+    background-color: #34495e;
+    display: inline-block;
+    width: 80%;
+}
+
+nav img {
+    width: 10%;
+}
+
+/* Style for skip link - hidden by default, visible on focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+.skip-link:focus {
+    position: static;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 1000;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* H1 heading styling */
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #2c3e50;
+}
+
+/* Paragraph styling */
+p {
+    line-height: 1.6;
+}
