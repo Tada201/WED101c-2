@@ -1,8 +1,8 @@
 
 /* Existing background image styles */
 .background-image {
-    width: 800px;
-    height: 400px;
+    width: 700px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -44,7 +44,7 @@ b, p {
 }
 
 .button {
-    background-color: #FF8C00;
+    background-color: #34495e;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -58,7 +58,7 @@ b, p {
 }
 
 .button:hover {
-    background-color: #FFA500;
+    background-color: #0c04a2be;
 }
 
 .container {
@@ -103,20 +103,43 @@ footer {
 }
 
 /* List item styling */
-/* li {
+li {
     display: block;
     width: 100%;
-} */
+}
 
 nav {
     background-color: #34495e;
-    display: inline-block;
-    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-nav img {
-    width: 10%;
+nav span {
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
 }
+
+nav span:last-child {
+    margin-right: 0;
+}
+
+nav span:hover {
+    text-decoration: underline;
+}
+
+/* Remove nav img styles as image is removed */
+/* nav img {
+    width: 10%;
+} */
 
 /* Style for skip link - hidden by default, visible on focus */
 .skip-link {
