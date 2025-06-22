@@ -15,9 +15,10 @@
     <script> 
         window.addEventListener('scroll', () => {
         const banner = document.querySelector('.banner');
+        // Fix: Only select .banner-content if it exists
         const content = document.querySelector('.banner-content');
         const overlay = document.querySelector('.banner-overlay');
-        
+        if (!content || !overlay) return; // Prevent error if not present
         let scrollY = window.scrollY;
         let maxScroll = window.innerHeight; // Adjust if needed
         
