@@ -36,6 +36,25 @@ h2 {
     text-align: center;
 }
 
+.banner {
+    background-image: url('src/images/Banner.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the image stationary during scroll (parallax effect) */
+    height: 300px; /* Adjust height as needed */
+    width: 100%;
+}
+
+/* Optional: Make sure body has margin 0 to align header perfectly */
+body {
+    margin: 0;
+}
+
+
+
+
+
+
 b, p {
     font-size: 16px;
     font-weight: normal;
@@ -109,7 +128,7 @@ li {
 }
 
 nav {
-    background-color: #34495e;
+    background-color: #063f78;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -119,6 +138,14 @@ nav {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+main#maincontent {
+    padding-top: 50px; /* Adjust based on nav height */
 }
 
 nav span {
@@ -134,6 +161,7 @@ nav span:last-child {
 
 nav span:hover {
     text-decoration: underline;
+    
 }
 
 /* Remove nav img styles as image is removed */
@@ -195,5 +223,12 @@ h1 {
 
 /* Paragraph styling */
 p {
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+/* Prevent nav links from turning blue when pressed */
+nav a:active,
+nav a:visited {
+    color: white !important;
+    text-decoration: none !important;
 }
