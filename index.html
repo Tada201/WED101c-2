@@ -6,35 +6,59 @@
     <title> Cool gork page</title>
     <link rel ="icon" type="image/png" href="src/images/terminal.png">
     <link rel="stylesheet" href="styles.css">
+    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
+
 </head>
 
 <body>
-    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
+
+    <script> 
+        window.addEventListener('scroll', () => {
+        const banner = document.querySelector('.banner');
+        const content = document.querySelector('.banner-content');
+        const overlay = document.querySelector('.banner-overlay');
+        
+        let scrollY = window.scrollY;
+        let maxScroll = window.innerHeight; // Adjust if needed
+        
+        // Calculate shrink factor (0 = top of page, 1 = scrolled down 100%)
+        let factor = Math.min(scrollY / maxScroll, 1);
+        
+        // Shrink content
+        content.style.transform = `scale(${1 - factor * 0.3})`; // Shrinks up to 70% of size
+        content.style.opacity = `${1 - factor * 0.5}`; // Fade out content a bit
+        
+        // Darken overlay
+        overlay.style.background = `rgba(0, 0, 0, ${factor * 0.5})`; // Up to 50% dark
+        });
+    </script>
+
+
+    
     <nav>
-        <span><a href="index.html">Home</a></span>
-        <a href="Information.html">Info</a>
-        <span>Image library</span>
+        <span><a href="#" id="nav-home">Home</a></span>
+        <span><a href="#" id="nav-about">About</a></span>
+        <span><a href="#" id="nav-image">Image Library</a></span>
+        <span><a href="#" id="nav-info">Info</a></span>
     </nav>
 
 
     <main id="maincontent">
-        <div class="container">
-            <h1> My Coursera test site</h1>
-            <h2> Welcome to my site</h2>
-            <br>
-            <br>
-            <b>Hey look I am making my own website </b>
-            <p> Hope you grade me good on this one</p>
-            <div class="image-section">
-                <ol class="grid">
-                    <li>This is background image 1: <img src="src/images/background1.jpg" alt="Background Image 1" class="background-image"></li>
-                    <li>This is background image 2: <img src="src/images/background2.png" alt="Background Image 2" class="background-image"></li>
-                    <li>This is background image 3: <img src="src/images/background3.jpg" alt="Background Image 3" class="background-image"></li>
-                    <li><button onclick="window.open('https://en.wikipedia.org/wiki/HTML5', '_blank')" class="button"> Visit Wiki </button></li>
-                </ol>
+        <header class="banner">
+            <div class="home-banner-box">
+                <h1>Welcome to My Site</h1>
+                <p>Here at Aperture Science</p>
+                <p>We test all kinds of stuff on this website</p>
             </div>
-            <div style="text-align: center;">
-                <iframe src="https://example.com" title="My cool web" width="800" height="400"></iframe>
+            <div class="banner-overlay"></div>
+        </header>
+        <div class="container">
+            <div class="home-info-box" id="home-info-box">
+                <h2 class="main-heading">My Coursera test site</h2>
+                <h3 class="main-subheading">Welcome to my site</h3>
+                <p>Hey look, I am making my own website</p>
+                <p>Hope you grade me well on this one</p>
+                </div>
             </div>
         </div>
     </main>
@@ -42,5 +66,38 @@
     <footer> 
         <p>&copy; Copyrighted 2025 by RandomDevName</p>
     </footer>  
+    <script>
+    // Dynamic subpage loader
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainContent = document.getElementById('maincontent');
+        const homeContent = mainContent.innerHTML; // Save the full main content including banner
+        function loadPage(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    mainContent.innerHTML = `<div class='container'>${html}</div>`;
+                })
+                .catch(() => {
+                    mainContent.innerHTML = "<div class='container'><p>Failed to load page.</p></div>";
+                });
+        }
+        document.getElementById('nav-home').onclick = function(e) {
+            e.preventDefault();
+            mainContent.innerHTML = homeContent; // Restore the full main content including banner
+        };
+        document.getElementById('nav-about').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/About.html');
+        };
+        document.getElementById('nav-image').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/image.html');
+        };
+        document.getElementById('nav-info').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/Info.html');
+        };
+    });
+    </script>
 </body>
 </html>
