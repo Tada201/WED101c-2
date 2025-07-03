@@ -1,0 +1,1464 @@
+Directory structure:
+└── tada201-wed101c-2.git/
+    ├── README.md
+    ├── html5.md
+    ├── index.html
+    ├── styles.css
+    ├── styles.md
+    └── src/
+        └── images/
+            └── pages/
+                ├── About.html
+                ├── image.html
+                └── Info.html
+
+
+Files Content:
+
+================================================
+FILE: README.md
+================================================
+# WED101c-web
+A basic html website tp test basic web desgin and tags
+
+
+
+================================================
+FILE: html5.md
+================================================
+# Comprehensive HTML5 Reference Sheet with Parameters, Examples, and Usage
+
+## Document Structure Elements
+- `<!DOCTYPE html>`: Declares the document type and version of HTML.
+  - Usage: Must be the first line in an HTML document to ensure standards mode rendering.
+  - Example:
+  ```html
+  <!DOCTYPE html>
+  ```
+- `<html lang="en">`: Root element of an HTML page.
+  - Parameter: `lang` - Specifies the language of the document (e.g., "en" for English).
+  - Usage: Wraps all content; `lang` helps with accessibility and SEO.
+  - Example:
+  ```html
+  <html lang="en">
+    <!-- page content -->
+  </html>
+  ```
+- `<head>`: Contains metadata, scripts, styles, and title.
+  - Usage: Placed inside `<html>`, contains non-visible info.
+  - Example:
+  ```html
+  <head>
+    <title>My Website</title>
+  </head>
+  ```
+- `<title>`: Sets the title of the document.
+  - Usage: Appears in browser tab and search engine results.
+  - Example:
+  ```html
+  <title>My Website</title>
+  ```
+- `<meta>`: Metadata about the document.
+  - Common parameters:
+    - `charset`: Character encoding (e.g., `UTF-8`).
+    - `name`: Name of the metadata (e.g., `viewport`).
+    - `content`: Content of the metadata.
+  - Usage: Defines document settings like encoding and viewport.
+  - Example:
+  ```html
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ```
+- `<link>`: Links external resources like stylesheets or icons.
+  - Parameters:
+    - `rel`: Relationship type (e.g., `stylesheet`, `icon`).
+    - `href`: URL of the linked resource.
+    - `type`: MIME type (optional).
+  - Usage: Used to include CSS files or favicons.
+  - Example:
+  ```html
+  <link rel="stylesheet" href="styles.css">
+  ```
+- `<style>`: Embeds internal CSS styles.
+  - Usage: Place CSS rules directly inside the document.
+  - Example:
+  ```html
+  <style>
+    body { font-family: Arial; }
+  </style>
+  ```
+- `<script>`: Embeds or links JavaScript code.
+  - Parameters:
+    - `src`: URL of external script.
+    - `type`: MIME type (optional).
+    - `async`, `defer`: Script loading behavior.
+  - Usage: Add interactivity or functionality.
+  - Example:
+  ```html
+  <script src="app.js" defer></script>
+  ```
+
+## Sectioning Elements
+- `<body>`: Contains the content of the document.
+  - Usage: Visible content goes here.
+  - Example:
+  ```html
+  <body>
+    <h1>Welcome</h1>
+  </body>
+  ```
+- `<header>`: Introductory content or navigation links.
+  - Usage: Typically contains logo, site title, navigation.
+  - Example:
+  ```html
+  <header>
+    <h1>Site Title</h1>
+    <nav>...</nav>
+  </header>
+  ```
+- `<nav>`: Navigation links.
+  - Usage: Contains primary site navigation.
+  - Example:
+  ```html
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+  ```
+- `<main>`: Main content of the document.
+  - Usage: Unique main content, one per page.
+  - Example:
+  ```html
+  <main>
+    <article>...</article>
+  </main>
+  ```
+- `<section>`: Thematic grouping of content.
+  - Usage: Group related content with a heading.
+  - Example:
+  ```html
+  <section>
+    <h2>Features</h2>
+    <p>Details about features.</p>
+  </section>
+  ```
+- `<article>`: Independent, self-contained content.
+  - Usage: Blog posts, news articles, forum posts.
+  - Example:
+  ```html
+  <article>
+    <h2>Blog Post Title</h2>
+    <p>Content...</p>
+  </article>
+  ```
+- `<aside>`: Content tangentially related to the main content.
+  - Usage: Sidebars, pull quotes, related links.
+  - Example:
+  ```html
+  <aside>
+    <h3>Related</h3>
+    <p>Links or info.</p>
+  </aside>
+  ```
+- `<footer>`: Footer for a section or page.
+  - Usage: Copyright, contact info, legal links.
+  - Example:
+  ```html
+  <footer>
+    <p>&copy; 2025 My Site</p>
+  </footer>
+  ```
+  <script src="app.js" defer></script>
+
+## Text Content Elements
+- `<h1>` to `<h6>`: Headings, `<h1>` is the highest level.
+  - Example: `<h1>Main Title</h1>`
+- `<p>`: Paragraph.
+  - Example: `<p>This is a paragraph.</p>`
+- `<hr>`: Thematic break (horizontal rule).
+- `<pre>`: Preformatted text.
+  - Example:
+  ```html
+  <pre>
+  Line 1
+  Line 2
+  </pre>
+  ```
+- `<blockquote>`: Quoted section.
+  - Example:
+  ```html
+  <blockquote cite="https://example.com">
+    This is a quote.
+  </blockquote>
+  ```
+- `<ol>`: Ordered list.
+  - Example:
+  ```html
+  <ol>
+    <li>First item</li>
+    <li>Second item</li>
+  </ol>
+  ```
+- `<ul>`: Unordered list.
+  - Example:
+  ```html
+  <ul>
+    <li>Item one</li>
+    <li>Item two</li>
+  </ul>
+  ```
+- `<li>`: List item.
+- `<dl>`: Description list.
+  - Example:
+  ```html
+  <dl>
+    <dt>Term</dt>
+    <dd>Description</dd>
+  </dl>
+  ```
+- `<dt>`: Term/name in a description list.
+- `<dd>`: Description of a term in a description list.
+- `<a>`: Hyperlink.
+  - Parameters:
+    - `href`: URL to link to.
+    - `target`: Where to open the link (`_blank`, `_self`).
+    - `rel`: Relationship (e.g., `noopener`).
+  - Example: `<a href="https://example.com" target="_blank" rel="noopener">Example</a>`
+- `<em>`: Emphasized text (usually italic).
+- `<strong>`: Strong importance (usually bold).
+- `<small>`: Smaller text.
+- `<cite>`: Citation.
+- `<code>`: Inline code.
+  - Example: `<code>console.log('Hello');</code>`
+- `<kbd>`: Keyboard input.
+- `<samp>`: Sample output.
+- `<var>`: Variable.
+- `<br>`: Line break.
+- `<span>`: Generic inline container.
+- `<b>`: Bold text.
+- `<i>`: Italic text.
+- `<u>`: Underlined text.
+- `<mark>`: Marked/highlighted text.
+- `<del>`: Deleted text.
+- `<ins>`: Inserted text.
+
+## Embedded Content
+- `<img>`: Image.
+  - Parameters:
+    - `src`: Image URL.
+    - `alt`: Alternative text.
+    - `width`, `height`: Dimensions.
+  - Example: `<img src="image.jpg" alt="Description" width="300" height="200">`
+- `<audio>`: Audio content.
+- `<video>`: Video content.
+- `<source>`: Media source for audio/video.
+- `<track>`: Text tracks for media.
+- `<iframe>`: Inline frame to embed another document.
+  - Parameters:
+    - `src`: URL of the embedded page.
+    - `title`: Description for accessibility.
+    - `width`, `height`: Dimensions.
+  - Example: `<iframe src="https://example.com" title="Example" width="600" height="400"></iframe>`
+- `<embed>`: External content or plugin.
+- `<object>`: External resource.
+- `<param>`: Parameters for `<object>`.
+- `<canvas>`: Graphics drawing area.
+- `<map>`: Image map.
+- `<area>`: Hotspot in an image map.
+
+## Table Content
+- `<table>`: Table.
+- `<caption>`: Table caption.
+- `<thead>`: Table header group.
+- `<tbody>`: Table body group.
+- `<tfoot>`: Table footer group.
+- `<tr>`: Table row.
+- `<th>`: Table header cell.
+- `<td>`: Table data cell.
+
+## Forms and Input
+- `<form>`: Form container.
+- `<input>`: Input control.
+  - Parameters:
+    - `type`: Type of input (text, password, checkbox, radio, submit, etc.).
+    - `name`: Name of the input.
+    - `value`: Value of the input.
+    - `placeholder`: Placeholder text.
+    - `required`: Required field.
+  - Example: `<input type="text" name="username" placeholder="Enter username" required>`
+- `<textarea>`: Multi-line text input.
+- `<button>`: Button.
+- `<select>`: Drop-down list.
+- `<option>`: Option in a drop-down list.
+- `<label>`: Label for form control.
+- `<fieldset>`: Group related form elements.
+- `<legend>`: Caption for `<fieldset>`.
+- `<datalist>`: Predefined options for input.
+- `<output>`: Result of a calculation.
+- `<progress>`: Progress bar.
+- `<meter>`: Scalar measurement within a known range.
+
+## Interactive Elements
+- `<details>`: Disclosure widget.
+- `<summary>`: Summary for `<details>`.
+- `<dialog>`: Dialog box or window.
+- `<menu>`: List of commands.
+- `<menuitem>`: Command in a menu.
+
+## Scripting
+- `<script>`: JavaScript code.
+- `<noscript>`: Content for browsers without scripting.
+
+## Metadata
+- `<base>`: Base URL for relative links.
+- `<meta>`: Metadata about the document.
+
+## Global Attributes (common to most elements)
+- `id`: Unique identifier.
+- `class`: CSS class.
+- `style`: Inline CSS styles.
+- `title`: Additional information.
+- `lang`: Language of element content.
+- `hidden`: Indicates element is not yet, or is no longer, relevant.
+
+## ARIA and Accessibility
+- `role`: Defines the role of an element.
+- `aria-*`: Various attributes to improve accessibility.
+
+---
+
+This reference sheet covers the most commonly used HTML5 elements and attributes, with parameters and examples to aid understanding and usage.
+
+
+
+================================================
+FILE: index.html
+================================================
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cool gork page</title>
+    <link rel ="icon" type="image/png" href="src/images/terminal.png">
+    <link rel="stylesheet" href="styles.css">
+    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
+
+</head>
+
+<body>
+
+    <script> 
+        window.addEventListener('scroll', () => {
+        const banner = document.querySelector('.banner');
+        // Fix: Only select .banner-content if it exists
+        const content = document.querySelector('.banner-content');
+        const overlay = document.querySelector('.banner-overlay');
+        if (!content || !overlay) return; // Prevent error if not present
+        let scrollY = window.scrollY;
+        let maxScroll = window.innerHeight; // Adjust if needed
+        
+        // Calculate shrink factor (0 = top of page, 1 = scrolled down 100%)
+        let factor = Math.min(scrollY / maxScroll, 1);
+        
+        // Shrink content
+        content.style.transform = `scale(${1 - factor * 0.3})`; // Shrinks up to 70% of size
+        content.style.opacity = `${1 - factor * 0.5}`; // Fade out content a bit
+        
+        // Darken overlay
+        overlay.style.background = `rgba(0, 0, 0, ${factor * 0.5})`; // Up to 50% dark
+        });
+    </script>
+
+
+    
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" data-mdb-navbar-init>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#!">CraftY</a>
+      <button class="navbar-toggler" type="button" data-mdb-collapse-init
+        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#!">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Attractions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Opinions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#!">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+</header>
+
+
+    <main id="maincontent">
+        <header class="banner">
+            <div class="home-banner-box">
+                <h1>Welcome to My Site</h1>
+                <p>Here at Aperture Science</p>
+                <p>We test all kinds of stuff on this website</p>
+            </div>
+            <div class="banner-overlay"></div>
+        </header>
+        <div class="container">
+            <div class="home-info-box" id="home-info-box">
+                <h2 class="main-heading">My Coursera test site</h2>
+                <h3 class="main-subheading">Welcome to my site</h3>
+                <p>Hey look, I am making my own website</p>
+                <p>Hope you grade me well on this one</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer> 
+        <p>&copy; Copyrighted 2025 by RandomDevName</p>
+    </footer>  
+    <script>
+    // Dynamic subpage loader
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainContent = document.getElementById('maincontent');
+        const homeContent = mainContent.innerHTML; // Save the full main content including banner
+        function loadPage(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    mainContent.innerHTML = `<div class='container'>${html}</div>`;
+                })
+                .catch(() => {
+                    mainContent.innerHTML = "<div class='container'><p>Failed to load page.</p></div>";
+                });
+        }
+        document.getElementById('nav-home').onclick = function(e) {
+            e.preventDefault();
+            mainContent.innerHTML = homeContent; // Restore the full main content including banner
+        };
+        document.getElementById('nav-about').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/About.html');
+        };
+        document.getElementById('nav-image').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/image.html');
+        };
+        document.getElementById('nav-info').onclick = function(e) {
+            e.preventDefault();
+            loadPage('src/images/pages/Info.html');
+        };
+    });
+    </script>
+
+    <script>
+      // Navbar scroll effect for transparency
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+    </script>
+</body>
+</html>
+
+
+
+================================================
+FILE: styles.css
+================================================
+/* Existing background image styles */
+.background-image {
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    /* Pattern background */
+    background-color: #313131;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.banner {
+    width: 100% !important;
+    height: 80vh;
+    background-image: url('src/images/Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.banner-content h1, .banner-content h2, .banner-content p {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+
+h1 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #1A2526;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1A2526;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Optional: Make sure body has margin 0 to align header perfectly */
+body {
+    margin: 0;
+}
+
+b, p {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 20px;
+    text-align: left;
+}
+
+/* Home page main heading */
+#main-home-content h1 {
+    font-family: 'Georgia', serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Home page subheading */
+#main-home-content h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a2526;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Home page paragraph */
+#main-home-content b {
+    font-size: 18px;
+    color: #444;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Large text with shadow */
+#main-home-content p {
+    font-size: 32px;
+    color: #666;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.button {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0c04a2be;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid #CCCCCC;
+    margin: 20px 0;
+}
+
+#image-page .image-section {
+    background-color: #F0F0F0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Header styling */
+header {
+    background-color: #2c3e50;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #34495e;
+}
+
+/* Main content styling */
+main {
+    background-color: #ecf0f1;
+    font-size: 18px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* List item styling */
+li {
+    display: block;
+    width: 100%;
+}
+
+nav {
+    background-color: #063f78;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav > span {
+    margin-right: 20px;
+}
+
+main#maincontent {
+    padding-top: 0 !important; /* Remove or reduce padding to eliminate white space above banner */
+}
+
+/* Banner Styles */
+.banner {
+    background-image: url('src/images/Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    margin-top: 60px; /* Adjust this value to match your navbar height if needed */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.banner-content h1, .banner-content h2, .banner-content p {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure the banner always spans the full width of the viewport */
+.banner {
+    width: 100% !important;
+    max-width: none !important;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Prevent .container from affecting the banner */
+.banner .container, .banner-container, #main-home-content {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+/* Remove/override any previous or conflicting banner styles */
+#main-home-content {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Modern Responsive Image Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: none;
+  background: #23272e !important;
+  transition: box-shadow 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+  .caption {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+/* Make containers and cards blend with dark pattern background */
+.container,
+#image-page .image-section,
+main {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Bounding box for text elements */
+.text-bounding-box {
+    background: rgba(24, 49, 83, 0.85); /* lighter, more opaque blue */
+    border-radius: 16px;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    margin: 2.5rem auto;
+    max-width: 700px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+    color: #fff;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+/* Optional: add spacing for headings inside the box */
+.text-bounding-box h1,
+.text-bounding-box h2 {
+    margin-top: 0;
+    color: #eaf2fb;
+}
+
+.gallery-bounding-box {
+    background: #23272e;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    margin: 2.5rem auto 2rem auto;
+    max-width: 900px;
+    min-width: 320px;
+    border: 1.5px solid #2e3a4d;
+    position: relative;
+    z-index: 1;
+}
+
+/* About/Who We Are section bounding box */
+.about-bounding-box {
+    background: #183153;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 2rem 2.5rem 1.5rem 2.5rem;
+    margin: 2.5rem auto 2rem auto;
+    max-width: 700px;
+    min-width: 320px;
+    border: 1.5px solid #2e3a4d;
+    color: #fff;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-bounding-box h2 {
+    color: #eaf2fb;
+    margin-top: 0;
+}
+
+.about-bounding-box ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.2em;
+}
+
+.about-bounding-box li {
+    margin-bottom: 0.5em;
+}
+
+/* Info Page Banner Box */
+.info-banner-box {
+  background: rgba(30, 30, 30, 0.65);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 600px;
+  min-width: 260px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.info-banner-box h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.85);
+  margin-bottom: 0.5em;
+}
+.info-banner-box p {
+  color: #dddddd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-top: 0;
+}
+@media (max-width: 700px) {
+  .info-banner-box {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .info-banner-box h1 {
+    font-size: 2rem;
+  }
+  .info-banner-box p {
+    font-size: 1.1rem;
+  }
+}
+
+/* About Page Banner Box */
+.about-banner-box {
+  background: rgba(30, 30, 30, 0.65);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 600px;
+  min-width: 260px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.about-banner-box h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.85);
+  margin-bottom: 0.5em;
+}
+.about-banner-box p {
+  color: #dddddd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-top: 0;
+}
+@media (max-width: 700px) {
+  .about-banner-box {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .about-banner-box h1 {
+    font-size: 2rem;
+  }
+  .about-banner-box p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Home Page Specific Styles */
+.home-banner-box {
+  background: rgba(30, 30, 30, 0.65);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 600px;
+  min-width: 260px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.home-banner-box h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.85);
+  margin-bottom: 0.5em;
+}
+.home-banner-box p {
+  color: #dddddd;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin-top: 0;
+}
+@media (max-width: 700px) {
+  .home-banner-box {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .home-banner-box h1 {
+    font-size: 2rem;
+  }
+  .home-banner-box p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Home Info Box Style */
+.home-info-box {
+    background: rgba(234, 242, 251, 0.92); /* lighter blue/white */
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto 0 auto;
+    max-width: 500px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    color: #183153;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.home-info-box b {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-size: 1.18em;
+    font-family: 'Arial', 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.home-info-box p {
+    margin: 0;
+    font-size: 1.13em;
+    font-family: 'Arial', 'Roboto', sans-serif;
+}
+
+
+
+================================================
+FILE: styles.md
+================================================
+# Comprehensive CSS Reference Sheet with Parameters and Examples
+
+## Selectors
+- `*`: Universal selector, selects all elements.
+- `element`: Type selector, selects all elements of given type (e.g., `p`, `div`).
+- `.class`: Class selector, selects all elements with the specified class.
+- `#id`: ID selector, selects the element with the specified ID.
+- `element.class`: Selects elements of a specific type with a specific class.
+- `element, element`: Grouping selector, selects all specified elements.
+- `element > element`: Child selector, selects direct children.
+- `element element`: Descendant selector, selects all descendants.
+- `element + element`: Adjacent sibling selector.
+- `element ~ element`: General sibling selector.
+- `:hover`, `:focus`, `:active`: Pseudo-classes for user interaction.
+- `::before`, `::after`: Pseudo-elements for inserting content.
+
+## Box Model Properties
+- `width`, `height`
+  - Parameters: length values (px, em, %, etc.)
+  - Example: `width: 100px; height: 50px;`
+- `margin`
+  - Parameters: length or auto; can specify one to four values for top, right, bottom, left.
+  - Example: `margin: 10px 20px 10px 20px;`
+- `padding`
+  - Parameters: length values; similar to margin.
+  - Example: `padding: 5px 10px;`
+- `border`
+  - Parameters: width, style, color.
+  - Example: `border: 1px solid black;`
+- `box-sizing`
+  - Parameters: `content-box` (default), `border-box`.
+  - Example: `box-sizing: border-box;`
+
+## Text and Font Properties
+- `color`
+  - Parameters: color names, hex, rgb, rgba, hsl.
+  - Example: `color: #333333;`
+- `font-family`
+  - Parameters: font names, generic families.
+  - Example: `font-family: Arial, sans-serif;`
+- `font-size`
+  - Parameters: length, percentage, keywords.
+  - Example: `font-size: 16px;`
+- `font-weight`
+  - Parameters: normal, bold, 100-900.
+  - Example: `font-weight: bold;`
+- `font-style`
+  - Parameters: normal, italic, oblique.
+  - Example: `font-style: italic;`
+- `line-height`
+  - Parameters: number, length, percentage.
+  - Example: `line-height: 1.5;`
+- `text-align`
+  - Parameters: left, right, center, justify.
+  - Example: `text-align: center;`
+- `text-decoration`
+  - Parameters: none, underline, overline, line-through.
+  - Example: `text-decoration: underline;`
+- `text-transform`
+  - Parameters: none, uppercase, lowercase, capitalize.
+  - Example: `text-transform: uppercase;`
+- `letter-spacing`
+  - Parameters: length.
+  - Example: `letter-spacing: 2px;`
+- `word-spacing`
+  - Parameters: length.
+  - Example: `word-spacing: 5px;`
+
+## Background and Color
+- `background-color`
+  - Parameters: color values.
+  - Example: `background-color: #f0f0f0;`
+- `background-image`
+  - Parameters: URL or gradients.
+  - Example: `background-image: url('image.jpg');`
+- `background-repeat`
+  - Parameters: repeat, no-repeat, repeat-x, repeat-y.
+  - Example: `background-repeat: no-repeat;`
+- `background-position`
+  - Parameters: position keywords or length.
+  - Example: `background-position: center center;`
+- `background-size`
+  - Parameters: length, cover, contain.
+  - Example: `background-size: cover;`
+- `opacity`
+  - Parameters: 0 (transparent) to 1 (opaque).
+  - Example: `opacity: 0.5;`
+
+## Display and Positioning
+- `display`
+  - Parameters: block, inline, inline-block, flex, grid, none.
+  - Example: `display: flex;`
+- `position`
+  - Parameters: static, relative, absolute, fixed, sticky.
+  - Example: `position: absolute;`
+- `top`, `right`, `bottom`, `left`
+  - Parameters: length or auto.
+  - Example: `top: 10px; left: 20px;`
+- `z-index`
+  - Parameters: integer.
+  - Example: `z-index: 10;`
+- `float`
+  - Parameters: left, right, none.
+  - Example: `float: left;`
+- `clear`
+  - Parameters: none, left, right, both.
+  - Example: `clear: both;`
+- `overflow`
+  - Parameters: visible, hidden, scroll, auto.
+  - Example: `overflow: hidden;`
+
+## Flexbox Properties
+- `display: flex`
+  - Enables flexbox layout.
+- `flex-direction`
+  - Parameters: row, column, row-reverse, column-reverse.
+  - Example: `flex-direction: row;`
+- `justify-content`
+  - Parameters: flex-start, flex-end, center, space-between, space-around.
+  - Example: `justify-content: center;`
+- `align-items`
+  - Parameters: flex-start, flex-end, center, baseline, stretch.
+  - Example: `align-items: center;`
+- `flex-wrap`
+  - Parameters: nowrap, wrap, wrap-reverse.
+  - Example: `flex-wrap: wrap;`
+- `flex-grow`, `flex-shrink`, `flex-basis`
+  - Parameters: number, length.
+  - Example: `flex-grow: 1;`
+- `order`
+  - Parameters: integer.
+  - Example: `order: 2;`
+
+## Grid Properties
+- `display: grid`
+  - Enables grid layout.
+- `grid-template-columns`, `grid-template-rows`
+  - Parameters: track sizes (length, %, auto).
+  - Example: `grid-template-columns: 1fr 2fr;`
+- `grid-gap`, `gap`
+  - Parameters: length.
+  - Example: `gap: 10px;`
+- `grid-column`, `grid-row`
+  - Parameters: line numbers or span.
+  - Example: `grid-column: 1 / span 2;`
+- `justify-items`, `align-items`
+  - Parameters: start, end, center, stretch.
+  - Example: `justify-items: center;`
+
+## List Properties
+- `list-style-type`
+  - Parameters: disc, circle, square, decimal, none.
+  - Example: `list-style-type: square;`
+- `list-style-position`
+  - Parameters: inside, outside.
+  - Example: `list-style-position: inside;`
+- `list-style-image`
+  - Parameters: URL.
+  - Example: `list-style-image: url('marker.png');`
+
+## Table Properties
+- `border-collapse`
+  - Parameters: collapse, separate.
+  - Example: `border-collapse: collapse;`
+- `border-spacing`
+  - Parameters: length.
+  - Example: `border-spacing: 5px;`
+- `table-layout`
+  - Parameters: auto, fixed.
+  - Example: `table-layout: fixed;`
+
+## Animation and Transition
+- `transition`
+  - Parameters: property, duration, timing-function, delay.
+  - Example: `transition: all 0.3s ease;`
+- `animation`
+  - Parameters: name, duration, timing-function, delay, iteration-count, direction.
+  - Example: `animation: slidein 3s ease-in-out;`
+- `transform`
+  - Parameters: rotate, scale, translate, skew.
+  - Example: `transform: rotate(45deg);`
+
+## Other Common Properties
+- `cursor`
+  - Parameters: pointer, default, move, text, wait, etc.
+  - Example: `cursor: pointer;`
+- `visibility`
+  - Parameters: visible, hidden, collapse.
+  - Example: `visibility: hidden;`
+- `box-shadow`
+  - Parameters: offset-x, offset-y, blur-radius, spread-radius, color.
+  - Example: `box-shadow: 2px 2px 5px rgba(0,0,0,0.3);`
+- `text-shadow`
+  - Parameters: offset-x, offset-y, blur-radius, color.
+  - Example: `text-shadow: 1px 1px 2px black;`
+- `vertical-align`
+  - Parameters: baseline, sub, super, top, middle, bottom.
+  - Example: `vertical-align: middle;`
+- `white-space`
+  - Parameters: normal, nowrap, pre, pre-wrap, pre-line.
+  - Example: `white-space: nowrap;`
+- `word-wrap`
+  - Parameters: normal, break-word.
+  - Example: `word-wrap: break-word;`
+- `resize`
+  - Parameters: none, both, horizontal, vertical.
+  - Example: `resize: both;`
+
+---
+
+This reference sheet covers a wide range of CSS properties and selectors from basic to advanced, with parameters and examples to serve as a comprehensive guide.
+
+
+
+================================================
+FILE: src/images/pages/About.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Aperture Science</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="about-banner-box">
+            <h1>About Us</h1>
+            <p>Learn more about our team and mission.</p>
+        </div>
+        <div class="banner-overlay"></div>
+    </header>
+    <main id="maincontent">
+        <div class="about-bounding-box">
+            <section>
+                <h2>Who We Are</h2>
+                <p>Aperture Science Innovators is a leading research company specializing in the development of advanced testing environments and innovative technologies.</p>
+                <ul>
+                    <li>Founded: 1947</li>
+                    <li>Founder: Cave Johnson</li>
+                    <li>Location: Upper Michigan Peninsula</li>
+                    <li>Number of Employees: 327</li>
+                    <li>Favorite Element: Molybdenum</li>
+                </ul>
+                <h2>Fun Facts</h2>
+                <ul>
+                    <li>We once tried to make a combustible lemon.</li>
+                    <li>Our test subjects have a 97% survival rate (citation needed).</li>
+                    <li>We have the world’s largest collection of repulsion gel.</li>
+                    <li>Our break room has a working portal to the moon (please do not use unsupervised).</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+================================================
+FILE: src/images/pages/image.html
+================================================
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cool gork page</title>
+    <link rel ="icon" type="image/png" href="src/images/terminal.png">
+    <link rel="stylesheet" href="styles.css">
+
+
+<body>
+    <div id="image-page">
+        <div class="gallery-bounding-box">
+            <div class="image-section">
+                <section class="gallery">
+                    <div class="gallery-item">
+                        <img src="src/images/background1.jpg" alt="Background image 1">
+                        <div class="caption">Background image 1</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="src/images/background2.png" alt="Background image 2">
+                        <div class="caption">Background image 2</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="src/images/background3.jpg" alt="Background image 3">
+                        <div class="caption">Background image 3</div>
+                    </div>
+                </section>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <button onclick="window.open('https://en.wikipedia.org/wiki/HTML5', '_blank')" class="button"> Visit Wiki </button>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <iframe src="https://example.com" title="My cool web" width="800" height="400"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+================================================
+FILE: src/images/pages/Info.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Aperture Science</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="info-banner-box">
+            <h1>Test Facts & Stats</h1>
+            <p>Quick numbers from Aperture Science</p>
+        </div>
+        <div class="banner-overlay"></div>
+    </header>
+    <main id="maincontent">
+        <section class="container">
+            <div class="text-bounding-box">
+                <h2>Random Info</h2>
+                <ul>
+                    <li>Number of test chambers: 1,024</li>
+                    <li>Average portal velocity: 87 m/s</li>
+                    <li>Number of companion cubes lost: 42</li>
+                    <li>Annual cake consumption: 3,141 slices</li>
+                    <li>Turrets in inventory: 256</li>
+                </ul>
+                <h2>Testing Quotes</h2>
+                <blockquote>"The cake is a lie."</blockquote>
+                <blockquote>"When life gives you lemons, make combustible lemons!"</blockquote>
+                <blockquote>"Remember: Science rhymes with compliance!"</blockquote>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+
