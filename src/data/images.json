@@ -1,0 +1,32 @@
+[
+  {
+    "src": "/src/assets/image1.jpg",
+    "alt": "Lab Experiment",
+    "caption": "A typical day in the lab."
+  },
+  {
+    "src": "/src/assets/image2.jpg",
+    "alt": "Portal Gun",
+    "caption": "The device that changed everything."
+  },
+  {
+    "src": "/src/assets/image3.jpg",
+    "alt": "GLaDOS",
+    "caption": "Our beloved AI companion."
+  },
+  {
+    "src": "/src/assets/image4.jpg",
+    "alt": "Test Chamber",
+    "caption": "Another test chamber completed."
+  },
+  {
+    "src": "/src/assets/image5.jpg",
+    "alt": "Companion Cube",
+    "caption": "Your best friend, forever."
+  },
+  {
+    "src": "/src/assets/image6.jpg",
+    "alt": "Turret",
+    "caption": "Hello, friend."
+  }
+]

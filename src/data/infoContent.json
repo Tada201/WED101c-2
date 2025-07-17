@@ -1,0 +1,18 @@
+{
+  "title": "Important Information",
+  "intro": "Welcome to the information hub of Aperture Science. Here you can find details about our ongoing research, safety protocols, and career opportunities.",
+  "sections": [
+    {
+      "heading": "Research & Development",
+      "content": "Our R&D department is constantly pushing the boundaries of science. Current projects include advanced AI ethics, interdimensional travel, and the development of new, more efficient testing apparatuses."
+    },
+    {
+      "heading": "Safety Protocols",
+      "content": "At Aperture Science, safety is our number one priority. All personnel are required to adhere to strict safety guidelines, including proper handling of hazardous materials, mandatory emergency drills, and regular psychological evaluations. Please report any anomalies immediately."
+    },
+    {
+      "heading": "Career Opportunities",
+      "content": "Are you a highly motivated individual with a passion for science and a disregard for personal safety? Aperture Science is always looking for talented scientists, engineers, and test subjects. Visit our contact page to inquire about openings."
+    }
+  ]
+}
