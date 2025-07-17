@@ -1,0 +1,3 @@
+# This file ensures the assets/audio directory is created
+# Place Portal sound effects and audio files here
+# Files will be served from /assets/audio/ URL path

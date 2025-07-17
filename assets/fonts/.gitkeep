@@ -1,0 +1,3 @@
+# This file ensures the assets/fonts directory is created
+# Place custom fonts here if needed
+# Files will be served from /assets/fonts/ URL path

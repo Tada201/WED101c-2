@@ -1,0 +1,3 @@
+# This file ensures the assets/images directory is created
+# Place Portal game screenshots and other images here
+# Files will be served from /assets/images/ URL path
