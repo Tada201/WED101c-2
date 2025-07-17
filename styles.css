@@ -1,5 +1,55 @@
 /* Existing background image styles */
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.gallery figure:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    display: block;
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    text-align: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+#image {
+    width: 480px;
+    height: 320px;
+    margin: 20px auto;
+    border: 2px solid #333;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #555;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 :root {
     --primary-color: #007bff;
     --dark-bg: #1a2526;
@@ -28,6 +78,13 @@
 
 .navbar-brand:hover {
     color: var(--primary-color);
+}
+
+.navbar-brand-logo {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .nav-item {

@@ -1,302 +1,64 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cool gork page</title>
-    <link rel ="icon" type="image/png" href="src/images/terminal.png">
-    <link rel="stylesheet" href="styles.css">
-<<<<<<< HEAD
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUFVw" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-=======
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
->>>>>>> fcfc6b199cc2e5b526c1c0cc979d9a5922c26392
-    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cool gork page</title>
+    <link rel="icon" type="image/png" href="src/images/terminal.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body>
-
-    <script> 
-        window.addEventListener('scroll', () => {
-        const banner = document.querySelector('.banner');
-        // Fix: Only select .banner-content if it exists
-        const content = document.querySelector('.banner-content');
-        const overlay = document.querySelector('.banner-overlay');
-        if (!content || !overlay) return; // Prevent error if not present
-        let scrollY = window.scrollY;
-        let maxScroll = window.innerHeight; // Adjust if needed
-        
-        // Calculate shrink factor (0 = top of page, 1 = scrolled down 100%)
-        let factor = Math.min(scrollY / maxScroll, 1);
-        
-        // Shrink content
-        content.style.transform = `scale(${1 - factor * 0.3})`; // Shrinks up to 70% of size
-        content.style.opacity = `${1 - factor * 0.5}`; // Fade out content a bit
-        
-        // Darken overlay
-        overlay.style.background = `rgba(0, 0, 0, ${factor * 0.5})`; // Up to 50% dark
-
-        // Navbar scroll behavior
-        const navbar = document.querySelector('.navbar');
-        if (scrollY > 50) { // Adjust scroll threshold as needed
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-        }
-        });
-
-        // Navbar scroll behavior
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) { // Adjust scroll threshold as needed
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-    </script>
-
-
-    
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main Navigation">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" aria-label="Aperture Science Logo">Aperture Science</a>
-=======
-<header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" data-mdb-navbar-init>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#!">CraftY</a>
-      <button class="navbar-toggler" type="button" data-mdb-collapse-init
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#!">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Attractions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Opinions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Contact</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar -->
-</header>
->>>>>>> 27c487e738e750ec22750883e97bc95c80726751
-=======
+<body style="padding-top: 70px;">
+    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main Navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="src/images/Aperture-Science-Logo.png" alt="Aperture Science Logo" style="height: 40px;"></a>
->>>>>>> fcfc6b199cc2e5b526c1c0cc979d9a5922c26392
+            <a class="navbar-brand" href="./index.html"><img src="src/images/Aperture-Science-Logo.png" alt="Aperture Science Logo" class="navbar-brand-logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-<<<<<<< HEAD
                 <ul class="navbar-nav ms-auto">
-=======
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
->>>>>>> fcfc6b199cc2e5b526c1c0cc979d9a5922c26392
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" id="nav-home">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html" id="nav-home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="src/images/pages/About.html" id="nav-about">About</a>
+                        <a class="nav-link" href="src/pages/About.html" id="nav-about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="src/images/pages/image.html" id="nav-image">Image Library</a>
+                        <a class="nav-link" href="src/pages/image.html" id="nav-image">Image Library</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="src/images/pages/Info.html" id="nav-info">Info</a>
+                        <a class="nav-link" href="src/pages/Info.html" id="nav-info">Info</a>
                     </li>
                 </ul>
-<<<<<<< HEAD
-=======
-                <ul class="navbar-nav social-icons">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://facebook.com" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://instagram.com" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul>
->>>>>>> fcfc6b199cc2e5b526c1c0cc979d9a5922c26392
             </div>
         </div>
     </nav>
-=======
-<header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" data-mdb-navbar-init>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#!">CraftY</a>
-      <button class="navbar-toggler" type="button" data-mdb-collapse-init
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#!">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Attractions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Opinions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Contact</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar -->
-</header>
->>>>>>> 27c487e738e750ec22750883e97bc95c80726751
-
 
     <main id="maincontent">
-        <header class="banner">
-            <div class="home-banner-box">
-                <h1>Welcome to My Site</h1>
-                <p>Here at Aperture Science</p>
-                <p>We test all kinds of stuff on this website</p>
-            </div>
+        <header class="banner" role="banner" aria-label="Main banner">
             <div class="banner-overlay"></div>
-        </header>
-        <div class="container">
-            <div class="home-info-box" id="home-info-box">
-                <h2 class="main-heading">My Coursera test site</h2>
-                <h3 class="main-subheading">Welcome to my site</h3>
-                <p>Hey look, I am making my own website</p>
-                <p>Hope you grade me well on this one</p>
-                </div>
+            <div class="banner-content">
+                <h1>Welcome to the Cool Gork Page</h1>
+                <p>Your gateway to Aperture Science innovations.</p>
             </div>
-        </div>
+        </header>
+
+        <section class="container">
+            <div id="main-home-content">
+                <h1>Explore Our Site</h1>
+                <h2>Discover the latest in science and technology</h2>
+                <p>Join us as we push the boundaries of innovation and research.</p>
+                <a href="src/pages/About.html" class="button" role="button" aria-label="Learn more about us">Learn More</a>
+            </div>
+        </section>
     </main>
 
-    <footer> 
-        <p>&copy; Copyrighted 2025 by RandomDevName</p>
-    </footer>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-    // Dynamic subpage loader
-    document.addEventListener('DOMContentLoaded', function() {
-        const mainContent = document.getElementById('maincontent');
-        const homeContent = mainContent.innerHTML; // Save the full main content including banner
-        function loadPage(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    mainContent.innerHTML = `<div class='container'>${html}</div>`;
-                })
-                .catch(() => {
-                    mainContent.innerHTML = "<div class='container'><p>Failed to load page.</p></div>";
-                });
-        }
-        document.getElementById('nav-home').addEventListener('click', function(e) {
-            e.preventDefault();
-            mainContent.innerHTML = homeContent; // Restore the full main content including banner
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active', 'aria-current'));
-            this.classList.add('active', 'aria-current');
-        });
-        document.getElementById('nav-about').addEventListener('click', function(e) {
-            e.preventDefault();
-            loadPage('src/images/pages/About.html');
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active', 'aria-current'));
-            this.classList.add('active', 'aria-current');
-        });
-        document.getElementById('nav-image').addEventListener('click', function(e) {
-            e.preventDefault();
-            loadPage('src/images/pages/image.html');
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active', 'aria-current'));
-            this.classList.add('active', 'aria-current');
-        });
-        document.getElementById('nav-info').addEventListener('click', function(e) {
-            e.preventDefault();
-            loadPage('src/images/pages/Info.html');
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active', 'aria-current'));
-            this.classList.add('active', 'aria-current');
-        });
-    });
-    </script>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Aperture Science Innovators. All rights reserved.</p>
+    </footer>
 
-    <script>
-      // Navbar scroll effect for transparency
-      window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-          navbar.classList.add('navbar-scrolled');
-        } else {
-          navbar.classList.remove('navbar-scrolled');
-        }
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
